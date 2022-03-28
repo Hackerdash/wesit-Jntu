@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+<p id="status"></p>
+<p id="didd"></p>
+<script>
+alert();
+var difference_ms=0;
+var cur=Date();
+document.getElementById("demo").innerHTML = cur;
+var d = new Date("September 26, 2015 16:15:00");
+document.getElementById("status").innerHTML = d;
+var one_day=1000*60*60*24;
+if(cur.getTime()>d.getTime())
+{
+	alert("exceeed");
+}
+else
+{
+	alert("not exceed");
+}
+
+
+ document.getElementById("didd").innerHTML=cur-d;
+</script>
+
+<a href="index.php" id="links">Click here</a>
+</body>
+</html>

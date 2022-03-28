@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<script>
+
+		</script>
+	</head>
+	<body>
+		<script type="text/javascript">
+		var x=confirm("Exam will continue now !");
+		if(x)
+		{
+			alert("confirmed");
+
+		}
+		else
+		{
+			alert("not confirmed");
+			window.close(timerfinal.html);
+
+		}
+		</script>
+		<span id="countdown" class="timer" ></span>
+<script type="text/javascript">
+var seconds=120;
+function secondpassed()
+{
+	var minutes=Math.round((seconds-30)/60);
+	var remainingseconds=seconds%60;
+	if(remainingseconds<10){
+		remainingseconds="0"+remainingseconds;
+
+	}
+	document.getElementById('countdown').innerHTML=minutes+" : "+remainingseconds;
+	if(seconds==0){
+		clearInterval(countdownTimer);
+		document.getElementById('countdown').innerHTML="Buzz Buzz";
+	}
+	else
+	{
+		seconds--;
+	}
+
+}
+var countdownTimer=setInterval('secondpassed()',1000);
+</script>
+
+	</body>
+</html>
